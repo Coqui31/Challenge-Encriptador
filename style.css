@@ -1,0 +1,172 @@
+* {
+    background: rgb(255, 224, 230);
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    overflow: auto;
+}
+
+main {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.text-area {
+    border: none;
+    color: rgb(235, 129, 164);
+    margin-top: 20px;
+    text-transform: lowercase;
+    width: calc(100% - 30px);
+    height: 400px;
+}
+
+.text-area::placeholder {
+    text-transform: none; 
+}
+
+::placeholder {
+    color: rgb(235, 129, 164);
+}
+
+.text-area:focus {
+    outline: none;
+}
+
+.validacion::before {
+    content: url(imagenes/Vector.png);
+    margin-right: 5px;
+}
+
+.validacion {
+    color: rgb(235, 129, 164);
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.section-1, .section-2 {
+    flex-basis: 200px;
+    margin: 3%;
+}
+
+.texto-mensaje {
+    background-color: white;
+    background-image: url("imagenes/inspector_gadget.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 460px;
+    border-radius: 20px;
+    border-color: rgb(235, 129, 164);
+    opacity: 0px;
+    margin-left: 80px;
+    color: rgb(235, 129, 164);
+    box-shadow: 0px 24px 32px -8px #00000014;
+}
+
+.botones {
+    display: flex;
+    margin-top: 18px;
+}
+
+.boton-enc {
+    background-color: rgb(235, 129, 164);
+    border: 1px solid rgb(235, 129, 164);
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+    margin-top: 5px;
+}
+
+.boton-des {
+    background-color: rgb(250, 197, 208);
+    border: 1px solid rgb(235, 129, 164);
+    border-radius: 24px;
+    color: rgb(235, 129, 164);
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+    margin-top: 5px;
+}
+
+.copiar {
+    border: 1px solid rgb(235, 129, 164);
+    border-radius: 24px;
+    color: rgb(235, 129, 164);
+    cursor: pointer;
+    height: 67px;
+    margin-left: 115px;
+    width: 336px;
+    margin-top: 25px;
+}
+
+.boton-enc:hover, .boton-des:hover, .copiar:hover{
+    transform:scale(1.1);
+    transition: 1s;
+}
+
+.copyright {
+    font-family: Inter;
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 0px;
+    background-color: rgb(235, 129, 164);
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+@media screen and (max-width: 480px){
+    main {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .text-area {
+        width: calc(100% - 40px); 
+        margin-top: 10px; 
+    }
+
+    .texto-mensaje {
+        width: calc(100% - 80px); 
+        height: 360px;
+        margin-left: 20px;
+    }
+
+    .botones {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .boton-enc, .boton-des, .copiar {
+        width: calc(100% - 40px); 
+        margin: 5px 0;
+    }
+
+    .validacion {
+        font-size: 11px;
+    }
+
+    .copyright {
+        margin-top: 20px; 
+    }
+
+
+
+}
